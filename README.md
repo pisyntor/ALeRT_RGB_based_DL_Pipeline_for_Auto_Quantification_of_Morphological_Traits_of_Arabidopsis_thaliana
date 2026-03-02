@@ -14,10 +14,6 @@ This repository provides the full source code for an RGB-based image pipeline fo
 
 # Description
 
-![image](images/rgb_pipeline2b.png)
-
-**Figure 1.** The complete workflow of the developed RGB image analysis pipeline for extracting and analysing various morphological traits of *A. thaliana* plants.
-
 The pipeline consists of several stages:
 
 - **A** – Data collection
@@ -32,6 +28,10 @@ The pipeline consists of several stages:
 - **J** – Basic geometrical leaf traits used to calculate basic and derived numerical traits
 - **K** – Storage of extracted numerical plant- and leaf-level traits for each dataset
 - **L** – K-means clustering on the PCA-transformed datasets
+
+![image](images/rgb_pipeline2b.png)
+
+**Figure 1.** The complete workflow of the developed RGB image analysis pipeline for extracting and analysing various morphological traits of *A. thaliana* plants.
 
 # Modules
 
