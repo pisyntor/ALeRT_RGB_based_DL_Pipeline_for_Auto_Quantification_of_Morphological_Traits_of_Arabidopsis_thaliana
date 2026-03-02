@@ -1,0 +1,5 @@
+names:
+  0: leaf
+path: /workspace
+train: images/train
+val: images/val
