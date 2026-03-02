@@ -1,4 +1,4 @@
-# ALeRT: An RGB-based deep learning pipeline for automated phenotyping of rosette and leaf traits in *A. thaliana*
+# ALeRT: An RGB-based deep learning pipeline for automated phenotyping of rosette and leaf traits in *Arabidopsis thaliana*
 
 ![Python](https://img.shields.io/badge/Python-≥3.7-blue?logo=python&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv&logoColor=white)
@@ -61,26 +61,43 @@ Deep Learning-based segmentation of whole plant rosettes. Located in `02_segment
 
 Pre-trained weights are stored under `02_segmentation_new/models/` (`classic_models/` and `SAM1_models/`). See `02_segmentation_new/notebooks/readme.md` for detailed configuration instructions.
 
-## 03 — Leaf Segmentation and Tracking (Stage H)
+## 03 — Plant Segmentation (Stage H)
 
-Training and inference for leaf-level instance segmentation and multi-object tracking. Covers classical encoder-decoder models and SAM fine-tuning. All paths and options are set in configuration cells at the top of each notebook.
+Leaf-level instance segmentation and multi-object tracking. The module is split into three areas: **data preparation**, **model training**, and **inference**. All paths and options are set in configuration cells at the top of each notebook.
+
+### Inference
 
 | Notebook | Description |
 |----------|-------------|
-| `01_03_merged_training_and_SAM_fine_tuning.ipynb` | **Part 1** — Train U-Net / DeepLab / SegFormer models with `segmentation_models_pytorch`. **Part 2** — Fine-tune SAM via HuggingFace |
-| `02_04_merged_mask_generation_inference.ipynb` | **Part A** — Run classical model inference to generate masks. **Part B** — Run fine-tuned SAM inference to generate masks |
-| `03_inference.ipynb` | Leaf segmentation inference and tracking (YOLO, SAM2, Detectron2, BoxMOT) |
+| `inference.ipynb` | **Key notebook.** End-to-end leaf segmentation inference and tracking. Sections 1–5 run a single pipeline (YOLO or YOLO+SAM2). Section 6 performs a multi-model tracking sweep across YOLOv8, YOLOv11, SAM2, and Detectron2 with BoxMOT trackers (ByteTrack, DeepOcSort, BotSort, StrongSort) |
+
+### Data Preparation (`data_prep/`)
+
+| Notebook | Description |
+|----------|-------------|
+| `yolo_labels/yolo_ds_labels.ipynb` | Build train/val/test splits from raw images and masks, extract leaf contours, and save YOLO-format segmentation labels and a `ds.csv` dataset file |
+| `coco_labels/convert_yolo_to_coco_labels.ipynb` | Convert YOLO annotations to COCO JSON format for Detectron2 training |
+
+### Model Training (`seg_train_models/`)
+
+| Notebook | Description |
+|----------|-------------|
+| `train_yolo_v8.ipynb` | Train a YOLOv8 segmentation model |
+| `train_yolo_v11.ipynb` | Train a YOLOv11 segmentation model |
+| `train_detectron2.ipynb` | Train a Detectron2 Mask R-CNN model |
+| `train_sam2.ipynb` | Fine-tune SAM 2 for leaf segmentation |
 
 **Quick reference:**
 
-| Goal | Notebook | Section |
-|------|----------|---------|
-| Train U-Net / DeepLab / SegFormer | `01_03` | Part 1 — Configuration |
-| Fine-tune SAM | `01_03` | Part 2 — Configuration |
-| Run classical model on images | `02_04` | Part A — Configuration |
-| Generate masks with SAM | `02_04` | Part B — Configuration |
-
-See `03_readme.md` for detailed configuration parameters and usage instructions.
+| Goal | Notebook |
+|------|----------|
+| Run inference on new images | `inference.ipynb` — Section 1 (parameters) |
+| Prepare a YOLO training dataset | `data_prep/yolo_labels/yolo_ds_labels.ipynb` |
+| Convert labels to COCO format | `data_prep/coco_labels/convert_yolo_to_coco_labels.ipynb` |
+| Train YOLO v8 / v11 | `seg_train_models/train_yolo_v8.ipynb` or `train_yolo_v11.ipynb` |
+| Train Detectron2 | `seg_train_models/train_detectron2.ipynb` |
+| Fine-tune SAM 2 | `seg_train_models/train_sam2.ipynb` |
+| Run multi-model tracking sweep | `inference.ipynb` — Section 6 |
 
 ## 04 — PlantInspector: GUI-Based Plant Traits Extraction (Stage I)
 
@@ -165,9 +182,7 @@ pip install -r requirements.txt
 │   ├── merge_soil.py                       #   Legacy script — merge soil strips
 │   └── pie_chart.py                        #   Legacy script — colour pie charts
 │
-├── 02_example_output/                      # Module 01 — Sample inpainted images
-│
-├── 02_segmentation_new/                    # Module 02 — Rosette segmentation
+├── 02_rosette_segmentation/                    # Module 02 — Rosette segmentation
 │   ├── notebooks/
 │   │   ├── training_and_SAM_fine_tuning.ipynb
 │   │   └── mask_generation_inference.ipynb
@@ -176,9 +191,20 @@ pip install -r requirements.txt
 │   │   └── SAM1_models/
 │   └── input_data/
 │
-├── 03_inference.ipynb                      # Module 03 — Leaf segmentation inference
+├── 03_plant_segmentation/                  # Module 03 — Plant segmentation
+│   ├── inference.ipynb                    #   Key notebook — inference & tracking
+│   ├── data_prep/
+│   │   ├── yolo_labels/
+│   │   │   └── yolo_ds_labels.ipynb       #   Build splits & YOLO labels
+│   │   └── coco_labels/
+│   │       └── convert_yolo_to_coco_labels.ipynb #   YOLO → COCO conversion
+│   └── seg_train_models/
+│       ├── train_yolo_v8.ipynb
+│       ├── train_yolo_v11.ipynb
+│       ├── train_detectron2.ipynb
+│       └── train_sam2.ipynb
 │
-├── 04_gui_summary.md                       # Module 04 — PlantInspector summary
+├── 04_GUI_based_plant_traits_extraction   # Module 04 — PlantInspector summary
 │
 ├── 05_leaf_traits_extraction/              # Module 05 — Leaf traits
 │   ├── 01_leaf_traits_calculations.ipynb
