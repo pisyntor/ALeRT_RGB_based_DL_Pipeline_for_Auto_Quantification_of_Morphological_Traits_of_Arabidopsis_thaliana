@@ -61,7 +61,16 @@ Deep Learning-based segmentation of whole plant rosettes. Located in `02_segment
 
 Pre-trained weights are stored under `02_segmentation_new/models/` (`classic_models/` and `SAM1_models/`). See `02_segmentation_new/notebooks/readme.md` for detailed configuration instructions.
 
-## 03 — Plant Segmentation (Stage H)
+**Quick reference:**
+
+| Goal | Notebook | Section |
+|------|----------|---------|
+| Train U-Net / DeepLab / SegFormer | Part 1 — Configuration |
+| Fine-tune SAM | Part 2 — Configuration |
+| Run classical model on images | Part A — Configuration |
+| Generate masks with SAM | Part B — Configuration |
+
+## 03 — Leaf Segmentation and Tracking (Stage H)
 
 Leaf-level instance segmentation and multi-object tracking. The module is split into three areas: **data preparation**, **model training**, and **inference**. All paths and options are set in configuration cells at the top of each notebook.
 
