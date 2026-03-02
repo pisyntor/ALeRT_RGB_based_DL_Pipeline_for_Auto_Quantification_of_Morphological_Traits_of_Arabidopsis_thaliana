@@ -1,6 +1,6 @@
 # ALeRT: An RGB-based deep learning pipeline for automated phenotyping of rosette and leaf traits in *A. thaliana*
 
-![Python](https://img.shields.io/badge/python-%E2%89%A53.7-blue?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-≥3.7-blue?logo=python&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-latest-orange?logo=scikit-learn&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-brightgreen)
@@ -12,7 +12,7 @@ This repository provides the full source code for an RGB-based image pipeline fo
 
 ![image](images/img1_cbr.png)
 
-# How It Works
+# Description
 
 ![image](images/rgb_pipeline2b.png)
 
