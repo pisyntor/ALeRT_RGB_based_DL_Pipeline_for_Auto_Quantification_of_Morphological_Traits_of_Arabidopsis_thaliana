@@ -5,7 +5,7 @@ Pre-processing pipeline for RGB image analysis of *Arabidopsis thaliana* plant p
 ## Directory Structure
 
 ```
-00_colour_analysis_v2/
+01_colour_n_area_analysis
 ├── colour_analysis_pp1.ipynb      # Main pipeline notebook
 ├── requirements.txt
 ├── output/                        # Inpainted soil images + merged strips
