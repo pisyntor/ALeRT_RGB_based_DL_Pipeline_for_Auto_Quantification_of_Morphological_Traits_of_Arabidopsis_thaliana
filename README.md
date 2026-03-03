@@ -61,8 +61,8 @@ Pre-trained weights are stored under `02_segmentation_new/models/` (`classic_mod
 
 **Quick reference:**
 
-| Goal | Notebook | Section |
-|------|----------|---------|
+| Goal | Notebook |
+|------|----------|
 | Train U-Net / DeepLab / SegFormer | Part 1 — Configuration |
 | Fine-tune SAM | Part 2 — Configuration |
 | Run classical model on images | Part A — Configuration |
