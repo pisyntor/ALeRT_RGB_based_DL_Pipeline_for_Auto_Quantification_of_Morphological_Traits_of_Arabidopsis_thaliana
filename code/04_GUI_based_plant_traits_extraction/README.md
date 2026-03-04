@@ -1,6 +1,6 @@
-## What PlantInspector GUI
+## GUI for extraction and visualisation of basic and derived rosette traits
 
-PlantInspector is a fast, desktop-based application designed for quantitative analysis of plant image datasets. It sits at the intersection of **computer vision**, **plant phenotyping**, and **machine learning data preparation**. It is not a general-purpose image editor — it expects pre-processed input (binary masks + segmented images) and produces structured quantitative outputs.
+GUI is a fast, desktop-based application designed for quantitative analysis of plant image datasets. It sits at the intersection of **computer vision**, **plant phenotyping**, and **machine learning data preparation**. It is not a general-purpose image editor — it expects pre-processed input (binary masks + segmented images) and produces structured quantitative outputs.
 
 Its four core purposes are:
 1. **Geometrical trait calculation and display** — visual overlays on plant images (e.g., perimeter, convex hull, bounding shapes)
