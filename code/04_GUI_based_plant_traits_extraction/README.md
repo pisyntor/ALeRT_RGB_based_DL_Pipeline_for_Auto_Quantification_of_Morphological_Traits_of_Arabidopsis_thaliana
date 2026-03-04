@@ -14,9 +14,9 @@ Its four core purposes are:
 
 This manual is almost certainly **one document in a larger ecosystem** that includes:
 
-- **Pre-processing pipeline** — PlantInspector requires input data to already be structured into `masks/` and `segmented_images/` subfolders per replicate. The pre-processing step that creates this structure is not described here, implying it is covered elsewhere (possibly another manual, script, or tool in the project).
+- **Pre-processing pipeline** — GUI requires input data to already be structured into `masks/` and `segmented_images/` subfolders per replicate. The pre-processing step that creates this structure is not described here, implying it is covered elsewhere (possibly another manual, script, or tool in the project).
 - **Two plant datasets** — the GUI explicitly supports switching between "plant dataset 1" and "plant dataset 2", suggesting the project involves at least two distinct experimental setups with different calibration factors and sowing/screening dates.
-- **Machine Learning pipeline** — the app is described as a source of training/testing/validation data for ML models. The ML models themselves are separate components. This manual positions PlantInspector as an upstream data-generation tool for those models.
+- **Machine Learning pipeline** — the app is described as a source of training/testing/validation data for ML models. The ML models themselves are separate components. This manual positions GUI as an upstream data-generation tool for those models.
 - **Output files consumed downstream** — results are saved to structured subfolders (`_Plots/`, `_PlotsHtml/`, `_Bars/`, `_Excels/`, `_Saved_Lists/`). These outputs likely feed into downstream analysis scripts, reports, or ML workflows that are part of the broader project but not described here.
 
 ---
