@@ -182,7 +182,7 @@ pip install -r requirements.txt
 # Structure
 
 ```console
-ALeRT RGB-based deep learning pipeline stages (1 -6)/
+ALeRT RGB-based deep learning pipeline stages (1 -6):
 ├── 01_colour_n_area_analysis                # Module 01 — Colour & area analysis
 │    └── colour_analysis_pp1.ipynb           #   Consolidated notebook (recommended)
 │
