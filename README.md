@@ -33,7 +33,7 @@ The pipeline consists of several stages:
 
 # Modules
 
-## 01 — Colour and Area Analysis (Stages A–D)
+## 01 — Colour and Area Analysis (Stages A–E)
 
 Pre-processing of raw RGB images to isolate soil backgrounds, merge time-series images into composite strips, and visualise colour distributions.
 
@@ -48,7 +48,7 @@ The consolidated notebook `01_pre_processing/pre_processing.ipynb` is the recomm
 
 `02_example_output/` contains sample inpainted output images for reference.
 
-## 02 — Rosette Segmentation (Stages E–G)
+## 02 — Rosette Segmentation (Stages F–G)
 
 Deep Learning-based segmentation of whole plant rosettes. Located in `02_segmentation_new/`. Includes training and inference for classical encoder-decoder models and SAM:
 
