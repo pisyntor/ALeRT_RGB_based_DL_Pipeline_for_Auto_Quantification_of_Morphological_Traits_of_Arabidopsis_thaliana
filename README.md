@@ -39,12 +39,12 @@ Pre-processing of raw RGB images to isolate soil backgrounds, merge time-series 
 
 The consolidated notebook `01_pre_processing/pre_processing.ipynb` is the recommended entry point. It combines all four pre-processing stages into a single, sequential workflow:
 
-| Step | Description | Original scripts |
-|------|-------------|------------------|
-| 1 — Inpainting | Remove plant canopies via `cv2.inpaint` (Telea) using binary masks, with morphological dilation/erosion | `opencv_inpaint.py` |
-| 2 — Merge plant images | Stack segmented plant images into horizontal composite strips | `merge_plant.py`, `pre_process1.py` |
-| 3 — Merge soil images | Crop and stack inpainted soil images into composite strips | `merge_soil.py`, `pre_process_2.py` |
-| 4 — Colour distribution | Generate K-means pie charts of colour proportions | `pie_chart.py` |
+| Step | Description | 
+|------|-------------|
+| 1 — Inpainting | Remove plant canopies via `cv2.inpaint` (Telea) using binary masks, with morphological dilation/erosion | 
+| 2 — Merge plant images | Stack segmented plant images into horizontal composite strips | 
+| 3 — Merge soil images | Crop and stack inpainted soil images into composite strips | 
+| 4 — Colour distribution | Generate K-means pie charts of colour proportions |
 
 `02_example_output/` contains sample inpainted output images for reference.
 
