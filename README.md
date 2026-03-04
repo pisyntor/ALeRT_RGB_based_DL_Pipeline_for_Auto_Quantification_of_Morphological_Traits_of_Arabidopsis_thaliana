@@ -219,7 +219,7 @@ pip install -r requirements.txt
   │   └── 03b_SAMPLE_leaf_trait_plots.ipynb
   │
   └── 06_plant_leaf_clustering.ipynb          # Module 06 — Clustering of Arabidopsis ecotypes using 
-                                                          extracted rosette and leaf traits
+                                                            extracted rosette and leaf traits
 ```
 
 # License
