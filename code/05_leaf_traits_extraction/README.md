@@ -1,4 +1,4 @@
-# 05 - Leaf Traits Extraction
+# Leaf Traits Extraction
 
 This module extracts morphological traits from segmented leaf and stem masks, computes plant-level metrics, and generates visualisations of trait dynamics over time.
 
