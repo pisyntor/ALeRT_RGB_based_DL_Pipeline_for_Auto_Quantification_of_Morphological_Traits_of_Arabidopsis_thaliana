@@ -207,7 +207,8 @@ pip install -r requirements.txt
 │       ├── train_detectron2.ipynb
 │       └── train_sam2.ipynb
 │
-├── 04_GUI_based_plant_traits_extraction   # Module 04 — GUI for calculation and visualisation of basic and derived rosette traits 
+├── 04_GUI_based_plant_traits_extraction   # Module 04 — GUI for calculation and visualisation
+│                                                         of basic and derived rosette traits 
 │
 ├── 05_leaf_traits_extraction/              # Module 05 — basic and derived leaf traits extraction
 │   ├── 01_leaf_traits_calculations.ipynb
@@ -216,7 +217,7 @@ pip install -r requirements.txt
 │   ├── 03_plotting_leaf_traits.ipynb
 │   └── 03b_SAMPLE_leaf_trait_plots.ipynb
 │
-└── 06_plant_leaf_clustering.ipynb          # Module 06 — Clustering of Arabidopsis ecotypes using extracted rosette and leaf traits
+└── 06_plant_leaf_clustering.ipynb          # Module 06 — Clustering of Arabidopsis ecotypes using rosette and leaf traits
 ```
 
 # License
