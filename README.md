@@ -182,52 +182,41 @@ pip install -r requirements.txt
 # Structure
 
 ```console
-├── 01_pre_processing/                      # Module 01 — Colour & area analysis
-│   ├── pre_processing.ipynb                #   Consolidated notebook (recommended)
-│   ├── opencv_inpaint.py                   #   Legacy script — inpainting
-│   ├── merge_plant.py                      #   Legacy script — merge plant strips
-│   ├── merge_soil.py                       #   Legacy script — merge soil strips
-│   └── pie_chart.py                        #   Legacy script — colour pie charts
+├── 01_colour_n_area_analysis                # Module 01 — Colour & area analysis
+│    └── colour_analysis_pp1.ipynb           #   Consolidated notebook (recommended)
 │
 ├── 02_rosette_segmentation/                    # Module 02 — Rosette segmentation
 │   ├── notebooks/
 │   │   ├── training_and_SAM_fine_tuning.ipynb
 │   │   └── mask_generation_inference.ipynb
-│   ├── models/
-│   │   ├── classic_models/
-│   │   └── SAM1_models/
-│   └── input_data/
+│   └── models/
+│       ├── classic_models/
+│       └── SAM1_models/
 │
-├── 03_plant_segmentation/                  # Module 03 — Plant segmentation
-│   ├── inference.ipynb                    #   Key notebook — inference & tracking
+├── 03_leaf_segmentation_n_tracking        # Module 03 — Leaf instance segmentation and tracking
+│   ├── inference.ipynb                    #  Key notebook — inference & tracking
+│   ├── helpers.py                         #  Required for running inference.ipynb 
 │   ├── data_prep/
 │   │   ├── yolo_labels/
-│   │   │   └── yolo_ds_labels.ipynb       #   Build splits & YOLO labels
+│   │   │   └── yolo_ds_labels.ipynb                #   Build splits & YOLO labels
 │   │   └── coco_labels/
-│   │       └── convert_yolo_to_coco_labels.ipynb #   YOLO → COCO conversion
+│   │       └── convert_yolo_to_coco_labels.ipynb   #   YOLO → COCO conversion
 │   └── seg_train_models/
 │       ├── train_yolo_v8.ipynb
 │       ├── train_yolo_v11.ipynb
 │       ├── train_detectron2.ipynb
 │       └── train_sam2.ipynb
 │
-├── 04_GUI_based_plant_traits_extraction   # Module 04 — PlantInspector summary
+├── 04_GUI_based_plant_traits_extraction   # Module 04 — GUI for calculation and visualisation of basic and derived rosette traits 
 │
-├── 05_leaf_traits_extraction/              # Module 05 — Leaf traits
+├── 05_leaf_traits_extraction/              # Module 05 — basic and derived leaf traits extraction
 │   ├── 01_leaf_traits_calculations.ipynb
 │   ├── 02_calculated_leaf_tratis_plots.ipynb
 │   ├── 02b_SAMPLE_leaf_traits_output.ipynb
 │   ├── 03_plotting_leaf_traits.ipynb
 │   └── 03b_SAMPLE_leaf_trait_plots.ipynb
 │
-├── 06_plant_leaf_clustering.ipynb          # Module 06 — Clustering
-│
-├── input/                                  # Raw images and segmentation masks
-│   ├── raw_input/
-│   └── segmented_imgs/
-│
-├── soil_and_plant_crop1.py                 # Standalone crop script
-└── requirements.txt
+└── 06_plant_leaf_clustering.ipynb          # Module 06 — Clustering of Arabidopsis ecotypes using extracted rosette and leaf traits
 ```
 
 # License
