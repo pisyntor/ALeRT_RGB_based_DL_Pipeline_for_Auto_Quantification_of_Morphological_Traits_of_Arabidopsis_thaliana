@@ -5,7 +5,7 @@ This directory contains the merged codebase for leaf segmentation and tracking, 
 ## Project Structure
 
 ```
-merged_run/
+Leaf instance segmentation and tracking/
 |── models/ # Place your .pt model files here.
 ├── seg_train_models/       # Training notebooks for different models
 │   ├── train_sam2.ipynb
