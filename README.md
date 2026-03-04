@@ -106,7 +106,7 @@ Leaf-level instance segmentation and multi-object tracking. The module is split 
 | Fine-tune SAM 2 | `seg_train_models/train_sam2.ipynb` |
 | Run multi-model tracking sweep | `inference.ipynb` — Section 6 |
 
-## 04 — PlantInspector: GUI-Based Plant Traits Extraction (Stage I)
+## 04 — GUI-Based Rosette Traits Extraction (Stage I)
 
 PlantInspector is a Windows desktop application for quantitative analysis of plant image datasets. It expects pre-processed input (binary masks + segmented images from earlier pipeline stages) and produces structured quantitative outputs.
 
