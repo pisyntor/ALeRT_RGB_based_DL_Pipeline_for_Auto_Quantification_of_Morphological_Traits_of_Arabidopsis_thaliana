@@ -186,7 +186,7 @@ pip install -r requirements.txt
   ├── 01_colour_n_area_analysis                #    Module 01 — Colour & area analysis
   │    └── colour_analysis_pp1.ipynb           #    Consolidated notebook (recommended)
   │
-  ├── 02_rosette_segmentation/                  #   Module 02 — Rosette segmentation
+  ├── 02_rosette_segmentation/                 #    Module 02 — Rosette segmentation
   │   ├── notebooks/
   │   │   ├── training_and_SAM_fine_tuning.ipynb
   │   │   └── mask_generation_inference.ipynb
