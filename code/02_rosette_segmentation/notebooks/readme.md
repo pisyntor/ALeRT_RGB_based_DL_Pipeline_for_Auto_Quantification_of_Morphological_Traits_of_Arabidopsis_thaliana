@@ -60,7 +60,7 @@ This module provides two main notebooks for training rosette segmentation models
 
 Please use `smp==0.3.3` for running mask generation. As the weights are trained using version `0.3.3` of the segmentation library, you will need to have a matching version to run the models. You can install the requirements by running `pip install -r mask_generation_requirements.txt`.
 
-## Encoder naming: the `tu-` prefix
+## Encoder naming: the specific prefix
 
 In `segmentation_models_pytorch`, encoders sourced from the [`timm`](https://github.com/huggingface/pytorch-image-models) (PyTorch Image Models) library are accessed using the **`tu-`** prefix. This gives access to hundreds of state-of-the-art architectures beyond the encoders bundled natively with smp.
 
