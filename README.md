@@ -25,7 +25,8 @@ The pipeline consists of several stages:
 - **I** – GUI-based extraction of geometrical plant traits used to calculate basic and derived rosette traits
 - **J** – Extraction of geometrical leaf traits used to calculate basic and derived leaf traits
 - **K** – Storage of extracted numerical plant- and leaf-level traits for each dataset
-- **L** – K-means clustering using the PCA-transformed datasets/
+- **L** – K-means clustering using the PCA-transformed datasets
+  
   
 
 ![image](images/rgb_pipeline2b.png)
