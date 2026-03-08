@@ -68,7 +68,7 @@ Pre-trained weights are stored under `02_rosette_segmentation/models/` (`classic
 |------|----------|
 | Train U-Net / DeepLabv3+ / PSPNet / SegFormer | Part 1 — Configuration |
 | Fine-tune SAM | Part 2 — Configuration |
-| Run classical model on images | Part A — Configuration |
+| Run classic segmentation model on images | Part A — Configuration |
 | Generate masks with SAM | Part B — Configuration |
 
 ## 03 — Leaf Segmentation and Tracking (Stage H)
