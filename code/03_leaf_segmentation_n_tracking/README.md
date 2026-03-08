@@ -6,17 +6,17 @@ This directory contains the codebase for leaf segmentation and tracking, combini
 
 ```
 Leaf instance segmentation and tracking
-  |── models/ # Place your .pt model files here.
+  |── models/                 # Place your .pt model files here.
   ├── seg_train_models/       # Training notebooks for different models
   │   ├── train_sam2.ipynb
   │   ├── train_yolo_v11.ipynb
   │   ├── train_yolo_v8.ipynb
   │   └── train_detectron2.ipynb
-  ├── data_prep/              # Data preparation scripts
-  ├── thirdparty/             # Third-party dependencies (SAM2, etc.)
-  ├── inference_merged.ipynb  # Unified inference notebook
-  ├── src_helpers.py          # Helper functions
-  └── README.md               # This file
+  ├── data_prep/                  # Data preparation scripts
+  ├── thirdparty/                 # Third-party dependencies (SAM2, etc.)
+  ├── inference_merged.ipynb      # Unified inference notebook
+  ├── src_helpers.py              # Helper functions
+  └── README.md                   # This file
 ```
 
 ## Installation
