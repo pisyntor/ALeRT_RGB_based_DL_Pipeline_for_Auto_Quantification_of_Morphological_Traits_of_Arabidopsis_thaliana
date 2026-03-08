@@ -3,8 +3,8 @@
 ![Python](https://img.shields.io/badge/Python-≥3.7-blue?logo=python&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-latest-orange?logo=scikit-learn&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-brightgreen)
 [![run with conda](https://img.shields.io/badge/run%20with-conda-3EB049?labelColor=000000&logo=anaconda)](https://docs.conda.io/en/latest/)
+![License](https://img.shields.io/badge/license-MIT-brightgreen)
 
 This repository provides the full source code for an RGB-based image pipeline for the extraction and analysis of morphological traits in *A. thaliana* at both the rosette and leaf levels.
 
