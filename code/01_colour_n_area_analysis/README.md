@@ -1,18 +1,18 @@
 # Colour Analysis Pipeline
 
-Pre-processing pipeline for RGB image analysis of *Arabidopsis thaliana* plant phenotyping data. The notebook processes raw pot images and segmentation masks to produce merged image strips and K-means colour distribution pie charts.
+Pre-processing pipeline for RGB image analysis of *Arabidopsis thaliana* phenotyping data. The notebook processes raw pot images and segmentation masks to produce merged image strips and K-means colour distribution pie charts.
 
 ## Directory Structure
 
 ```
 01_colour_n_area_analysis
-├── colour_analysis_pp1.ipynb      # Main pipeline notebook
+├── colour_analysis_pp1.ipynb        # Main pipeline notebook
 ├── requirements.txt
-├── output/                        # Inpainted soil images + merged strips
+├── output/                          # Inpainted soil images + merged strips
 │   ├── Col_0_DS2/
-│   │   ├── rep_XX/                # Individual inpainted soil images
-│   │   ├── rep_XX_soil_merged.png # Merged soil strip per replicate
-│   │   └── rep_XX_plant_merged.png# Merged plant strip per replicate
+│   │   ├── rep_XX/                  # Individual inpainted soil images
+│   │   ├── rep_XX_soil_merged.png   # Merged soil strip per replicate
+│   │   └── rep_XX_plant_merged.png  # Merged plant strip per replicate
 │   └── Ede-1_DS1/
 └── out_pie_charts/
     ├── plant_pie_chart/           # K-means colour pie charts for merged plant strips
@@ -29,7 +29,7 @@ The notebook runs five steps in order:
 
 1. **Inpainting** -- Uses segmentation masks to remove plant canopies from raw images via OpenCV inpainting (`cv2.INPAINT_TELEA`), producing soil-only images in `output/`.
 
-2. **Merge plant images** -- Stacks all segmented plant images for each replicate into a single horizontal strip, saved to `output/<ecotype>/rep_XX_plant_merged.png`.
+2. **Merge plant images** -- Merges all segmented plant images for each replicate into a single horizontal strip, saved to `output/<ecotype>/rep_XX_plant_merged.png`.
 
 3. **Plant colour distribution** -- Generates K-means pie charts from the merged plant strips, saved to `out_pie_charts/plant_pie_chart/<ecotype>/`.
 
