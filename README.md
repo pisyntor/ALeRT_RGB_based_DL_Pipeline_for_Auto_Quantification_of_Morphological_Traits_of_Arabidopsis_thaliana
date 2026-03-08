@@ -18,7 +18,7 @@ The pipeline consists of several stages:
 - **B** – Data preparation using auto-tray and auto-pot cropping
 - **C** – Annotation of whole plant canopies and individual leaves
 - **D** – Analysis of ecotype replicates based on growth and plant/soil colour distribution
-- **E** – Data splitting
+- **E** – Data splitting per replicate
 - **F** – Data augmentation based on affine transformations and colour jittering
 - **G** – Deep Learning-based rosette segmentation
 - **H** – Deep Learning-based leaf segmentation and tracking
