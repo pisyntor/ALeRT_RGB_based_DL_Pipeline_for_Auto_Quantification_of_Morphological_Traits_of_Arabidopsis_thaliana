@@ -73,7 +73,7 @@ Pre-trained weights are stored under `02_rosette_segmentation/models/` (`classic
 
 ## 03 — Leaf Segmentation and Tracking (Stage H)
 
-Leaf-level instance segmentation and multi-object tracking. The module is split into three areas: **data preparation**, **model training**, and **inference**. All paths and options are set in configuration cells at the top of each notebook.
+Leaf-level instance segmentation and multi-object tracking (`03_leaf_segmentation_n_tracking`). The module is split into three areas: **data preparation**, **model training**, and **inference**. All paths and options are set in configuration cells at the top of each notebook.
 
 ### Inference
 
@@ -94,7 +94,7 @@ Leaf-level instance segmentation and multi-object tracking. The module is split 
 |----------|-------------|
 | `train_yolo_v8.ipynb` | Train a YOLOv8 segmentation model |
 | `train_yolo_v11.ipynb` | Train a YOLOv11 segmentation model |
-| `train_detectron2.ipynb` | Train a Detectron2 Mask R-CNN model |
+| `train_detectron2.ipynb` | Train a Detectron2 with Mask R-CNN model |
 | `train_sam2.ipynb` | Fine-tune SAM 2 for leaf segmentation |
 
 **Quick reference:**
