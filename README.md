@@ -134,7 +134,7 @@ See `04_GUI_based_plant_traits_extraction/readme.md` for a detailed summary of t
 
 ## 05 — Leaf Traits Extraction (Stage J)
 
-Calculation of basic geometrical leaf traits and derived numerical measurements from segmented leaf instances. Located in `05_leaf_traits_extraction/`.
+Calculation of basic geometrical leaf traits and derived numerical measurements from segmented leaf instances. Located in `05_leaf_traits_extraction`.
 
 | Notebook | Description |
 |----------|-------------|
