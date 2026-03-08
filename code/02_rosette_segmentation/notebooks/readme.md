@@ -12,7 +12,7 @@ This module provides two main notebooks for training rosette segmentation models
   Shared imports and utilities for both parts.
 
 - **Part 1 — Classical segmentation**
-  Train U-Net / DeepLab / SegFormer-style models with `segmentation_models_pytorch` on a single dataset:
+  Train U-Net / DeepLabv3+ / PSPNet / SegFormer-style models with `segmentation_models_pytorch` on a single dataset:
   - **Part 1 — Configuration:** `ROOT_PATH`, `MODEL_SAVE_DIR`, `TMP_SAVE_DIR`, `PART1_SPLIT_JSON`, `PART1_BASE_DIR`, `PART1_BASE_DIR_LABEL`, encoder/decoder lists, `PART1_BATCH_SIZE`, `PART1_AUGMENTATION`
   - `MODEL_SAVE_DIR` and `TMP_SAVE_DIR` are derived from `ROOT_PATH` — change only `ROOT_PATH` to relocate all outputs.
   - Custom dataset, data loaders, training loop, evaluation, and optional **SegFormer** section (different encoders/decoders)
