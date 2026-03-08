@@ -49,7 +49,7 @@ The consolidated notebook `01_colour_n_area_analysis/colour_analysis_pp1.ipynb` 
 | 3 — Merge soil images | Crop and merge inpainted soil images into composite strips | 
 | 4 — Colour distribution | Generate K-means pie charts of colour proportions |
 
-`02_example_output/` contains sample inpainted output images for reference.
+`01_colour_n_area_analysis/output` contains sample inpainted output images for reference.
 
 ## 02 — Rosette Segmentation (Stages F–G)
 
