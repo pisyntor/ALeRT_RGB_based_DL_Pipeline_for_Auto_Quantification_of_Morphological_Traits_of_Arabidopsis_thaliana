@@ -31,7 +31,7 @@ The pipeline consists of several stages:
   
 ![image](images/rgb_pipeline2b.png)
 
-**Figure 1.** The complete workflow of the developed ALeRT RGB image analysis pipeline for extracting and analysing various morphological traits of *A. thaliana* plants.
+**Figure 1.** The complete workflow of the developed ALeRT AI-based pipeline for extracting and analysing various morphological traits of *A. thaliana* plants.
 
 # Modules
 
