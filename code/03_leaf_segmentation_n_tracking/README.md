@@ -1,11 +1,12 @@
 # Leaf Segmentation and Tracking
 
-This directory contains the merged codebase for leaf segmentation and tracking, combining functionality from multiple codebases with organized training notebooks for different models.
+This directory contains the codebase for leaf segmentation and tracking, combining functionality from multiple codebases with organised training notebooks for different models.
 
 ## Project Structure
 
 ```
-Leaf instance segmentation and tracking/
+Leaf instance segmentation and tracking
+|
 |── models/ # Place your .pt model files here.
 ├── seg_train_models/       # Training notebooks for different models
 │   ├── train_sam2.ipynb
@@ -77,10 +78,10 @@ Training notebooks are organized by model type in the `seg_train_models/` direct
 #### 2. **`train_yolo_v11.ipynb`** - YOLO v11 Training
 - **Description**: Train YOLO v11 instance segmentation model
 - **Framework**: [Ultralytics](https://docs.ultralytics.com/)
-- **Model**: yolo11m-seg (medium variant)
+- **Model**: yolo11m-seg (large variant)
 - **Output**: `yolo_training_run/weights/best.pt`
 - **Features**:
-  - Extensive data augmentation (rotation, copy-paste, perspective, etc.)
+  - Extensive data augmentation 
   - 300 epochs default training
   - Sanity check visualization included
 
@@ -91,7 +92,7 @@ Training notebooks are organized by model type in the `seg_train_models/` direct
 - **Output**: `runs/segment/yolov8/yolo_v8_training_run/weights/best.pt`
 - **Features**:
   - Similar augmentation to YOLO v11
-  - Early stopping with patience=20
+  - Early stopping included
   - 300 epochs default training
 
 #### 4. **`train_detectron2.ipynb`** - Detectron2 Training
