@@ -40,7 +40,7 @@ The pipeline consists of several stages:
 
 Pre-processing of raw RGB images to isolate soil backgrounds, merge time-series images into composite strips, and visualise colour distributions.
 
-The consolidated notebook `01_pre_processing/pre_processing.ipynb` is the recommended entry point. It combines all four pre-processing stages into a single, sequential workflow:
+The consolidated notebook `01_colour_n_area_analysis/colour_analysis_pp1.ipynb` is the recommended entry point. It combines all four pre-processing stages into a single, sequential workflow:
 
 | Step | Description | 
 |------|-------------|
@@ -53,14 +53,14 @@ The consolidated notebook `01_pre_processing/pre_processing.ipynb` is the recomm
 
 ## 02 — Rosette Segmentation (Stages F–G)
 
-Deep Learning-based segmentation of whole plant rosettes. Located in `02_segmentation_new/`. Includes training and inference for classical encoder-decoder models and SAM:
+Deep Learning-based segmentation of whole plant rosettes. Located in `02_rosette_segmentation`. Includes training and inference for classical encoder-decoder models and SAM:
 
 | Notebook | Description |
 |----------|-------------|
 | `training_and_SAM_fine_tuning.ipynb` | **Part 1** — Train U-Net / DeepLab / SegFormer models with `segmentation_models_pytorch`. **Part 2** — Fine-tune the Segment Anything Model (SAM) via HuggingFace |
 | `mask_generation_inference.ipynb` | **Part A** — Run classical model inference to generate masks. **Part B** — Run fine-tuned SAM inference to generate masks |
 
-Pre-trained weights are stored under `02_segmentation_new/models/` (`classic_models/` and `SAM1_models/`). See `02_segmentation_new/notebooks/readme.md` for detailed configuration instructions.
+Pre-trained weights are stored under `02_rosette_segmentation/models/` (`classic_models/` and `SAM1_models/`). See `02_segmentation_new/notebooks/readme.md` for detailed configuration instructions.
 
 **Quick reference:**
 
