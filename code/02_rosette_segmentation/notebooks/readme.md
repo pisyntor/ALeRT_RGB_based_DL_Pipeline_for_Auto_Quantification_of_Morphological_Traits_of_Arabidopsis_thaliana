@@ -1,6 +1,6 @@
 # Rosette Segmentation Notebooks
 
-This project provides two main notebooks for training rosette segmentation models and generating masks. All paths and options are set in **configuration cells** at the top of each part so you can run experiments without editing code throughout the file.
+This module provides two main notebooks for training rosette segmentation models and generating masks. All paths and options are set in **configuration cells** at the top of each part so you can run experiments without editing code throughout the file.
 
 ---
 
