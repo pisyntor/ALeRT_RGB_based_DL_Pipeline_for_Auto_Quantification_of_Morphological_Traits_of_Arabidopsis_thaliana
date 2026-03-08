@@ -20,12 +20,12 @@ The pipeline consists of several stages:
 - **D** – Analysis of ecotype replicates based on growth and plant/soil colour distribution
 - **E** – Data splitting per replicate
 - **F** – Data augmentation based on affine transformations and colour jittering
-- **G** – Deep Learning-based rosette segmentation
-- **H** – Deep Learning-based leaf segmentation and tracking
-- **I** – Basic geometrical plant traits used to calculate basic and derived numerical traits
-- **J** – Basic geometrical leaf traits used to calculate basic and derived numerical traits
+- **G** – Rosette segmentation 
+- **H** – Leaf instance segmentation and tracking 
+- **I** – GUI-based extraction of geometrical plant traits used to calculate basic and derived rosette traits
+- **J** – Extraction of geometrical leaf traits used to calculate basic and derived numerical traits
 - **K** – Storage of extracted numerical plant- and leaf-level traits for each dataset
-- **L** – K-means clustering on the PCA-transformed datasets
+- **L** – K-means clustering using the PCA-transformed datasets
 
 ![image](images/rgb_pipeline2b.png)
 
