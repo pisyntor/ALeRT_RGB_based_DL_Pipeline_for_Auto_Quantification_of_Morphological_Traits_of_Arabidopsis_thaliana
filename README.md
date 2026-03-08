@@ -23,7 +23,7 @@ The pipeline consists of several stages:
 - **G** – Rosette segmentation 
 - **H** – Leaf instance segmentation and tracking 
 - **I** – GUI-based extraction of geometrical plant traits used to calculate basic and derived rosette traits
-- **J** – Extraction of geometrical leaf traits used to calculate basic and derived numerical traits
+- **J** – Extraction of geometrical leaf traits used to calculate basic and derived leaf traits
 - **K** – Storage of extracted numerical plant- and leaf-level traits for each dataset
 - **L** – K-means clustering using the PCA-transformed datasets
 
