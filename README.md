@@ -42,7 +42,7 @@ The consolidated notebook `01_pre_processing/pre_processing.ipynb` is the recomm
 | Step | Description | 
 |------|-------------|
 | 1 — Inpainting | Remove plant canopies via `cv2.inpaint` (Telea) using binary masks, with morphological dilation/erosion | 
-| 2 — Merge plant images | Stack segmented plant images into horizontal composite strips | 
+| 2 — Merge plant images | Merge segmented plant images into horizontal composite strips | 
 | 3 — Merge soil images | Crop and stack inpainted soil images into composite strips | 
 | 4 — Colour distribution | Generate K-means pie charts of colour proportions |
 
