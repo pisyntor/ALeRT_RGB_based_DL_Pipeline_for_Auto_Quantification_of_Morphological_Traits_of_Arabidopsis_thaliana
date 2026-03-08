@@ -60,13 +60,13 @@ Deep Learning-based segmentation of whole plant rosettes. Located in `02_rosette
 | `training_and_SAM_fine_tuning.ipynb` | **Part 1** — Train U-Net / DeepLab / SegFormer models with `segmentation_models_pytorch`. **Part 2** — Fine-tune the Segment Anything Model (SAM) via HuggingFace |
 | `mask_generation_inference.ipynb` | **Part A** — Run classical model inference to generate masks. **Part B** — Run fine-tuned SAM inference to generate masks |
 
-Pre-trained weights are stored under `02_rosette_segmentation/models/` (`classic_models/` and `SAM1_models/`). See `02_segmentation_new/notebooks/readme.md` for detailed configuration instructions.
+Pre-trained weights are stored under `02_rosette_segmentation/models/` (`classic_models/` and `SAM1_models/`). Please see `02_rosette_segmentation/notebooks/readme.md` for detailed configuration instructions.
 
 **Quick reference:**
 
 | Goal | Notebook |
 |------|----------|
-| Train U-Net / DeepLab / SegFormer | Part 1 — Configuration |
+| Train U-Net / DeepLabv3+ / PSPNet / SegFormer | Part 1 — Configuration |
 | Fine-tune SAM | Part 2 — Configuration |
 | Run classical model on images | Part A — Configuration |
 | Generate masks with SAM | Part B — Configuration |
