@@ -171,7 +171,7 @@ K-means clustering on PCA-transformed trait datasets to identify phenotypic grou
 - [.NET Framework >= 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
 
 
-## Setting Up
+## Environment Setup
 
 We recommend using [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) to manage environments.
 
