@@ -111,7 +111,7 @@ Leaf-level instance segmentation and multi-object tracking (`03_leaf_segmentatio
 
 ## 04 — GUI-Based Rosette Traits Extraction (Stage I)
 
-PlantInspector is a Windows desktop application for quantitative analysis of plant image datasets. It expects pre-processed input (binary masks + segmented images from earlier pipeline stages) and produces structured quantitative outputs.
+Developed GUI is a Windows desktop application for quantitative analysis and extraction of rosette morphological traits. It expects specifc input (binary masks + segmented images from earlier pipeline stages) and produces structured quantitative outputs.
 
 **Core capabilities:**
 - **Geometrical trait visualisation** — overlays on plant images (perimeter, convex hull, bounding box/circle/ellipse)
@@ -131,7 +131,7 @@ PlantInspector is a Windows desktop application for quantitative analysis of pla
 | `_Excels/` | Raw numerical trait data as Excel files |
 | `_Saved_Lists/` | Geometrical traits and analysis parameters |
 
-See `04_gui_summary.md` for a detailed summary of the PlantInspector user manual.
+See `04_GUI_based_plant_traits_extraction/readme.md` for a detailed summary of the PlantInspector user manual.
 
 ## 05 — Leaf Traits Extraction (Stage J)
 
