@@ -49,7 +49,7 @@ This module provides two main notebooks for training rosette segmentation models
 
 | Goal                          | Notebook                          | Section to configure    | What you set |
 |-------------------------------|-----------------------------------|-------------------------|--------------|
-| Train U-Net/DeepLab/SegFormer | `training_and_SAM_fine_tuning`    | Part 1 — Configuration  | Paths, encoders/decoders, batch size, split JSON |
+| Train U-Net/DeepLab/PSPNet/SegFormer | `training_and_SAM_fine_tuning`    | Part 1 — Configuration  | Paths, encoders/decoders, batch size, split JSON |
 | Fine-tune SAM                 | `training_and_SAM_fine_tuning`    | Part 2 — Configuration  | SAM model name, dataset paths, save path, checkpoint paths |
 | Run classical model on images | `mask_generation_inference`       | Part A — Configuration  | Model path, input/output dirs, thresholds, device |
 | Generate masks with SAM       | `mask_generation_inference`       | Part B — Configuration  | SAM checkpoint, dataset paths, output folder names |
