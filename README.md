@@ -26,6 +26,7 @@ The pipeline consists of several stages:
 - **J** – Extraction of geometrical leaf traits used to calculate basic and derived leaf traits
 - **K** – Storage of extracted numerical plant- and leaf-level traits for each dataset
 - **L** – K-means clustering using the PCA-transformed datasets
+  
 
 ![image](images/rgb_pipeline2b.png)
 
