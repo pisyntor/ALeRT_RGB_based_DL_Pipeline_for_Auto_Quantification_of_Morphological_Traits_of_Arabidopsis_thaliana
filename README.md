@@ -201,7 +201,7 @@ pip install -r requirements.txt
   │   ├── helpers.py                         #  Required for running inference.ipynb 
   │   ├── data_prep/
   │   │   ├── yolo_labels/
-  │   │   │   └── yolo_ds_labels.ipynb                 #   Build splits & YOLO labels
+  │   │   │   └── yolo_ds_labels.ipynb                 #   Build data splits & YOLO labels
   │   │   └── coco_labels/
   │   │       └── convert_yolo_to_coco_labels.ipynb    #   YOLO → COCO conversion
   │   └── seg_train_models/
