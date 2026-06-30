@@ -78,7 +78,7 @@ Leaf-level instance segmentation and multi-object tracking (`03_leaf_segmentatio
 
 | Notebook | Description |
 |----------|-------------|
-| `inference.ipynb` | **Key notebook.** End-to-end leaf segmentation inference and tracking. Sections 1–5 run a single pipeline (YOLO or YOLO+SAM2). Section 6 performs a multi-model tracking sweep across YOLOv8, YOLOv11, SAM2, and Detectron2 with BoxMOT trackers (ByteTrack, DeepSort, DeepOcSort, BotSort, StrongSort) |
+| `inference.ipynb` | **Key notebook.** End-to-end leaf segmentation inference and tracking. Sections 1–5 run a single pipeline (YOLO or YOLO+SAM2). Section 6 performs a multi-model tracking sweep across YOLOv8, YOLOv11, SAM2, and Detectron2 with BoxMOT trackers (ByteTrack, DeepSort, BotSort, StrongSort) |
 
 ### Data Preparation (`data_prep/`)
 
