@@ -45,6 +45,24 @@ framework.
 - **When to use**: When objects look distinct and you want ID consistency across
   occlusions and re-appearances. Requires ReID weights (e.g., `lmbn_n_cuhk03_d.pt`).
 
+### DeepSORT (`deepsort/`)
+
+The classic appearance + motion tracker from *"Simple Online and Realtime Tracking
+with a Deep Association Metric"* (Wojke et al., 2017). StrongSort is a later
+refinement of this same design.
+
+- **Appearance model**: `ReidAutoBackend` embeddings matched with cosine distance
+  via `NearestNeighborDistanceMetric`, kept as a per-track feature gallery (bounded
+  by `nn_budget`).
+- **Motion model**: Kalman filter in XYAH space (center-x, center-y, aspect ratio,
+  height) used purely as a Mahalanobis gate — no camera motion compensation.
+- **Association**: Matching cascade that prioritises recently-seen tracks, followed
+  by an IoU fallback for unconfirmed / recently-lost tracks.
+- **Nested SORT module** (`sort/`): Contains `Detection`, `Track`, `Tracker`,
+  `linear_assignment`, and `iou_matching`.
+- **When to use**: A well-understood, lightweight appearance tracker. Requires ReID
+  weights (e.g., `osnet_x0_25_msmt17.pt`).
+
 ### DeepOCSoRT (`deepocsort/`)
 
 Extended OC-SORT with deep appearance features.
@@ -83,8 +101,8 @@ Observation-Centric SORT — a motion-only tracker (no ReID).
 
 ## Weights
 
-ReID model weights used by appearance-based trackers (StrongSort, DeepOCSoRT,
-BoTSORT) are stored in `boxmot/weights/`. These are specified via the
+ReID model weights used by appearance-based trackers (StrongSort, DeepSORT,
+DeepOCSoRT, BoTSORT) are stored in `boxmot/weights/`. These are specified via the
 `reid_weights` parameter when constructing a tracker. The weights are derived from the [ReID model zoo](https://kaiyangzhou.github.io/deep-person-reid/MODEL_ZOO) available online.
 
 ## Usage
@@ -92,6 +110,7 @@ BoTSORT) are stored in `boxmot/weights/`. These are specified via the
 ```python
 from boxmot.trackers.bytetrack.bytetrack import ByteTrack
 from boxmot.trackers.strongsort.strongsort import StrongSort
+from boxmot.trackers.deepsort.deepsort import DeepSort
 from boxmot.trackers.deepocsort.deepocsort import DeepOcSort
 from boxmot.trackers.botsort.botsort import BotSort
 

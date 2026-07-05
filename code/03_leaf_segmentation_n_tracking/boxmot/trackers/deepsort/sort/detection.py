@@ -1,0 +1,56 @@
+# Mikel Broström 🔥 Yolo Tracking 🧾 AGPL-3.0 license
+
+import numpy as np
+
+
+class Detection(object):
+    """
+    This class represents a bounding box detection in a single image.
+
+    Parameters
+    ----------
+    tlwh : array_like
+        Bounding box in format `(x, y, w, h)`.
+    conf : float
+        Detector confidence score.
+    cls : int
+        Detected object class.
+    det_ind : int
+        Index of the detection in the original per-frame detection array.
+    feat : array_like
+        A feature vector that describes the object contained in this image.
+
+    Attributes
+    ----------
+    tlwh : ndarray
+        Bounding box in format `(top left x, top left y, width, height)`.
+    conf : float
+        Detector confidence score.
+    feat : ndarray | NoneType
+        A feature vector that describes the object contained in this image.
+
+    """
+
+    def __init__(self, tlwh, conf, cls, det_ind, feat):
+        self.tlwh = np.asarray(tlwh, dtype=np.float32)
+        self.conf = conf
+        self.cls = cls
+        self.det_ind = det_ind
+        self.feat = feat
+
+    def to_tlbr(self):
+        """Convert bounding box to format `(min x, min y, max x, max y)`, i.e.,
+        `(top left, bottom right)`.
+        """
+        ret = self.tlwh.copy()
+        ret[2:] += ret[:2]
+        return ret
+
+    def to_xyah(self):
+        """Convert bounding box to format `(center x, center y, aspect ratio,
+        height)`, where the aspect ratio is `width / height`.
+        """
+        ret = self.tlwh.copy()
+        ret[:2] += ret[2:] / 2
+        ret[2] /= ret[3]
+        return ret
