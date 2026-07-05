@@ -125,8 +125,9 @@ The `inference_merged.ipynb` notebook provides a unified interface for leaf segm
 
 #### Tracking Algorithms:
 - **BoxMOT Trackers**: Advanced multi-object tracking
+  - BoTSort
   - ByteTrack
-  - DeepOcSort
+  - DeepSort
   - StrongSort
 
 #### Analysis Tools:
