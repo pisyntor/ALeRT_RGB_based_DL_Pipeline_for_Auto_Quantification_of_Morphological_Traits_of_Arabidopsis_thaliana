@@ -52,11 +52,11 @@ The consolidated notebook `01_colour_n_area_analysis/colour_analysis_pp1.ipynb` 
 
 ## 02 — Rosette Segmentation (Stages F–G)
 
-Deep Learning-based segmentation of whole plant rosettes. Located in `02_rosette_segmentation`. Includes training and inference for classical encoder-decoder models and SAM:
+Deep Learning-based segmentation of whole plant rosettes. Located in `02_rosette_segmentation`. Includes training and inference for classical encoder-decoder models and SAM-1:
 
 | Notebook | Description |
 |----------|-------------|
-| `training_and_SAM_fine_tuning.ipynb` | **Part 1** — Train U-Net / DeepLab / SegFormer models with `segmentation_models_pytorch`. **Part 2** — Fine-tune the Segment Anything Model (SAM) via HuggingFace |
+| `training_and_SAM_fine_tuning.ipynb` | **Part 1** — Train U-Net / DeepLab / SegFormer models with `segmentation_models_pytorch`. **Part 2** — Fine-tune the Segment Anything Model 1 (SAM-1) via HuggingFace |
 | `mask_generation_inference.ipynb` | **Part A** — Run classical model inference to generate masks. **Part B** — Run fine-tuned SAM inference to generate masks |
 | `SAM1_res_evaluation.ipynb` | Score a fine-tuned SAM-1 checkpoint against existing reference masks. An encoder-decoder model predicts a mask, its bounding box prompts SAM, and SAM's mask is scored per image and pooled. Nothing is trained, and neither model sees a reference mask before it predicts |
 
