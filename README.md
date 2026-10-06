@@ -1,4 +1,4 @@
-# ALeRT: An RGB-based deep learning pipeline for automated phenotyping of rosette and leaf traits in *Arabidopsis thaliana*
+# ALeRT: An RGB-based deep learning pipeline and benchmark for automated phenotyping of rosette and leaf traits in *Arabidopsis thaliana*
 
 ![Python](https://img.shields.io/badge/Python-≥3.7-blue?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/framework-PyTorch≥1.4-red)
