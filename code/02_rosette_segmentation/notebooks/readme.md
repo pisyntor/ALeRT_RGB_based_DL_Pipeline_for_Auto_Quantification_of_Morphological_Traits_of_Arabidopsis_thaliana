@@ -46,13 +46,13 @@ This module provides notebooks for training rosette segmentation models, generat
 
 ---
 
-## 3. `SAM1_res_evaluation.ipynb`
+## 3. `SAM1_seg_eval.ipynb`
 
 **Evaluation: score a fine-tuned SAM-1 checkpoint against existing reference masks.**
 
 For each test image, a fixed classical model predicts a mask, a bounding box is taken around that prediction, and the original RGB image plus that box are passed to a fixed SAM-1 checkpoint. SAM's mask is then scored against the reference mask that already exists for the image. Nothing is trained here, and neither model sees a reference mask before it predicts.
 
-**Order of use.** Each code cell sits under the heading that describes it. Run them top to bottom the first time: the imports and helpers cell, then **Shared model configuration**, **Define the dataset runner**, and **Load the two fixed checkpoints**. Those four are run once per session; run **Load the two fixed checkpoints** again after changing anything in the configuration. Then run **Predict and score DS1**, **Predict and score DS2**, or both, and finally **Additional SAM evaluation metrics**, which reads saved results only and so also runs in a fresh kernel.
+**Order of use.** Each code cell sits under the heading that describes it. Run them top to bottom the first time: the imports and helpers cell, then **Shared model configuration**, **Define the dataset runner**, and **Load the two fixed checkpoints**. Those four are run once per session; run **Load the two fixed checkpoints** again after changing anything in the configuration. Then run **Predict and score DS1**, **Predict and score DS2**, or both, and finally **Evaluation metrics**, which reads saved results only and so also runs in a fresh kernel.
 
 ### Shared model configuration
 
@@ -76,7 +76,7 @@ Each dataset cell needs only its own `SPLIT_JSON_DS*`, `BASE_DIR_DS*` (RGB image
 
 Both datasets are scored with whichever pair of checkpoints **Load the two fixed checkpoints** loaded. If you want each dataset scored with its own SAM checkpoint, change `SAM_CHECKPOINT_PATH` and run that cell again between them — otherwise the second dataset is a test of how well the first dataset's model transfers. `summary.json` records the checkpoint path and its SHA-256 for exactly this reason.
 
-### Additional SAM evaluation metrics
+### SAM-1 evaluation metrics
 
 Set `METRICS_RUN_DIR` to one completed dataset output folder (`.../sam1_ds1` or `.../sam1_ds2`) and run this section once per dataset you want to report. It reads that folder's saved CSV and summary, so it needs no checkpoints and runs in a fresh kernel.
 
@@ -121,7 +121,7 @@ Report the pooled and per-image figures separately, and say which one a headline
 
 That is intended. The notebook stops rather than skipping an image or substituting data, so a finished run always covers every test image, and a stopped run is marked `failed` in `summary.json` and cannot be mistaken for a complete one. The message names the file that caused it.
 
-**How to use:** fill in **Shared model configuration**, run everything down to **Load the two fixed checkpoints**, then run the dataset section you want — **Predict and score DS1**, **Predict and score DS2**, or both — and finally **Additional SAM evaluation metrics**.
+**How to use:** fill in **Shared model configuration**, run everything down to **Load the two fixed checkpoints**, then run the dataset section you want — **Predict and score DS1**, **Predict and score DS2**, or both — and finally **Evaluation metrics**.
 
 ---
 
