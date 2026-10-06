@@ -111,7 +111,7 @@ Each dataset writes to `SAM1_OUTPUT_ROOT/sam1_ds*/`:
 | `<ecotype>/<replicate>/unet_masks`, `sam_masks`, `segmented_images` | original-resolution PNGs. The source extension is kept in the output name so two images with the same stem cannot collide |
 | `per_image.csv` | one row per test image: image and mask paths, the box, empty-box flag, SAM TP/FP/FN/TN, SAM IoU, the classical model's IoU and its TP/FP/FN, `gt_ambiguous_px`, `sam_iou_gt_nonzero`, `label_resized` |
 | `summary.json` | status, image and empty-box counts, mean and pooled foreground IoU for both models, the label settings actually applied, and SHA-256 hashes of both checkpoints and the split JSON |
-| `additional_metrics.json` / `.csv` | written by **Additional SAM evaluation metrics**: pooled precision, recall, F1, MCC, specificity and G-mean for one completed run |
+| `additional_metrics.json` / `.csv` | written by **SAM-1 evaluation metrics**: pooled precision, recall, F1, MCC, specificity and G-mean for one completed run |
 
 IoU throughout is **foreground IoU**, `TP / (TP + FP + FN)`: agreement on background is never counted, so an empty prediction against a real plant scores 0 rather than scoring well on a mostly-soil photo. Two empty masks score 1.0.
 
