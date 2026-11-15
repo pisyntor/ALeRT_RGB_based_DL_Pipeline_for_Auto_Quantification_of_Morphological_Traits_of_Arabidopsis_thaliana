@@ -183,7 +183,7 @@ conda activate env_name
 pip install -r requirements.txt
 ```
 
-## Dataset Access
+# Dataset Access
 
 The *Arabidopsis thaliana* RGB datasets, including raw images and annotations, can be accessed [here](https://arabidopsis-rgb.latrobe.edu.au). A user must read and accept the copyright notice before downloading the datasets.
 
