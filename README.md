@@ -229,6 +229,9 @@ The *Arabidopsis thaliana* RGB datasets, including raw images and annotations, c
                                                             extracted rosette and leaf traits
 ```
 
+# Publication
+This work has been published in Computers and Electronics in Agriculture (2027): Sarić, R., Kashkan, I., Lewsey, M.G., Panzarová, K., Trtílek, M., Čustović, E., and Whelan, J. _ALeRT: An RGB-based deep learning pipeline and benchmark for automated phenotyping of rosette and leaf traits in Arabidopsis thaliana_. Journal article can be accessed [here](https://www.sciencedirect.com/science/article/pii/S0168169926012184?via%3Dihub).
+
 # License
 
 This repository is distributed under [LICENSE](LICENSE).
